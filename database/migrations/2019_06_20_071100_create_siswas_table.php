@@ -13,7 +13,7 @@ class CreateSiswasTable extends Migration
      */
     public function up()
     {
-        Schema::create('murids', function (Blueprint $table) {
+        Schema::create('siswas', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nama')->nullable();
             $table->timestamps();
