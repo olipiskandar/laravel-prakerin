@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\User;
 use App\Siswa;
 use Illuminate\Http\Request;
+use Validator;
 
 class SiswaController extends Controller
 {
@@ -53,7 +54,30 @@ class SiswaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input = $request->all();
+
+        $validator = Validator::make($input, [
+            'nama' => 'required'
+        ]);
+
+        if ($validator->fails()) {
+            $response = [
+                'success' => false,
+                'data' => 'Validation Error.',
+                'message' => $validator->errors()
+            ];
+            return response()->json($response, 500);
+        }
+
+        $siswa = Siswa::create($input);
+
+        $response = [
+            'success' => true,
+            'data' => $siswa,
+            'message' => 'Siswa Berhasil ditambahkan.'
+        ];
+
+        return response()->json($response, 200);
     }
 
     /**
@@ -103,7 +127,41 @@ class SiswaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $siswa = Siswa::find($id);
+        $input = $request->all();
+
+        if (!$siswa) {
+            $response = [
+                'success' => false,
+                'data' => 'Gagal Update.',
+                'message' => 'Siswa Tidak Ditemukan'
+            ];
+            return response()->json($response, 404);
+        }
+
+        $validator = Validator::make($input, [
+            'nama' => 'required'
+        ]);
+
+        if ($validator->fails()) {
+            $response = [
+                'success' => false,
+                'data' => 'Validation Error.',
+                'message' => $validator->errors()
+            ];
+            return response()->json($response, 500);
+        }
+
+        $siswa->nama = $input['nama'];
+        $siswa->save();
+
+        $response = [
+            'success' => true,
+            'data' => $siswa,
+            'message' => 'Siswa Berhasil Di Edit.'
+        ];
+
+        return response()->json($response, 200);
     }
 
     /**
@@ -114,6 +172,23 @@ class SiswaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $siswa = Siswa::find($id);
+
+        if (!$siswa) {
+            $response = [
+                'success' => false,
+                'data' => 'Gagal Menghapus.',
+                'message' => 'Siswa Tidak Ditemukan'
+            ];
+            return response()->json($response, 404);
+        }
+        $siswa->delete();
+        $response = [
+            'success' => true,
+            'data' => $siswa,
+            'message' => 'Siswa berhasil Dihapus.'
+        ];
+
+        return response()->json($response, 200);
     }
 }
