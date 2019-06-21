@@ -15,6 +15,14 @@ class SiswaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
+    // tambahan di controller:
+    // use App\Http\Controllers\Controller;
+
+    // simpan di routes->API
+    // Route::resource('siswa', 'Api\SiswaController');
+
     public function index()
     {
         $siswa = Siswa::all();
