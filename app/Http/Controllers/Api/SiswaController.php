@@ -238,18 +238,62 @@ class SiswaController extends Controller
         if (!$siswa) {
             $response = [
                 'success' => false,
-                'data' => 'Gagal Menghapus.',
+                'data' => 'Gagal Update.',
                 'message' => 'Siswa Tidak Ditemukan'
             ];
             return response()->json($response, 404);
         }
+
         $siswa->delete();
         $response = [
             'success' => true,
             'data' => $siswa,
-            'message' => 'Siswa berhasil Dihapus.'
+            'message' => 'Siswa Berhasil Dihapus.'
         ];
 
         return response()->json($response, 200);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // $siswa = Siswa::find($id);
+
+        // if (!$siswa) {
+        //     $response = [
+        //         'success' => false,
+        //         'data' => 'Gagal Menghapus.',
+        //         'message' => 'Siswa Tidak Ditemukan'
+        //     ];
+        //     return response()->json($response, 404);
+        // }
+        // $siswa->delete();
+        // $response = [
+        //     'success' => true,
+        //     'data' => $siswa,
+        //     'message' => 'Siswa berhasil Dihapus.'
+        // ];
+
+        // return response()->json($response, 200);
     }
 }
