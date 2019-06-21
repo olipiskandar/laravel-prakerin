@@ -45,16 +45,6 @@ class SiswaController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -62,12 +52,15 @@ class SiswaController extends Controller
      */
     public function store(Request $request)
     {
+        // 1. tampung semuan inputan ke $input;
         $input = $request->all();
 
+        // 2. Buat Validasi ditampung ke $validator
         $validator = Validator::make($input, [
-            'nama' => 'required'
+            'nama' => 'required|min:15'
         ]);
 
+        // 3. Chek validasi
         if ($validator->fails()) {
             $response = [
                 'success' => false,
@@ -77,15 +70,22 @@ class SiswaController extends Controller
             return response()->json($response, 500);
         }
 
+        // 4. buat fungsi untuk menghandle semua inputan ->
+        // dimasukan ke table
         $siswa = Siswa::create($input);
 
+        // 5. menampilkan response
         $response = [
             'success' => true,
             'data' => $siswa,
             'message' => 'Siswa Berhasil ditambahkan.'
         ];
 
+        // 6. tampilkan hasil
         return response()->json($response, 200);
+
+        // 7. menampilkan error di heroku :
+        // heroku config:set APP_DEBUG=true
     }
 
     /**
@@ -141,14 +141,14 @@ class SiswaController extends Controller
         if (!$siswa) {
             $response = [
                 'success' => false,
-                'data' => 'Gagal Update.',
-                'message' => 'Siswa Tidak Ditemukan'
+                'data' => 'Empty',
+                'message' => 'Siswa tidak ditemukan.'
             ];
             return response()->json($response, 404);
         }
 
         $validator = Validator::make($input, [
-            'nama' => 'required'
+            'nama' => 'required|min:15'
         ]);
 
         if ($validator->fails()) {
@@ -166,10 +166,63 @@ class SiswaController extends Controller
         $response = [
             'success' => true,
             'data' => $siswa,
-            'message' => 'Siswa Berhasil Di Edit.'
+            'message' => 'Siswa Berhasil di Update.'
         ];
 
         return response()->json($response, 200);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // $siswa = Siswa::find($id);
+        // $input = $request->all();
+
+        // if (!$siswa) {
+        //     $response = [
+        //         'success' => false,
+        //         'data' => 'Gagal Update.',
+        //         'message' => 'Siswa Tidak Ditemukan'
+        //     ];
+        //     return response()->json($response, 404);
+        // }
+
+        // $validator = Validator::make($input, [
+        //     'nama' => 'required'
+        // ]);
+
+        // if ($validator->fails()) {
+        //     $response = [
+        //         'success' => false,
+        //         'data' => 'Validation Error.',
+        //         'message' => $validator->errors()
+        //     ];
+        //     return response()->json($response, 500);
+        // }
+
+        // $siswa->nama = $input['nama'];
+        // $siswa->save();
+
+        // $response = [
+        //     'success' => true,
+        //     'data' => $siswa,
+        //     'message' => 'Siswa Berhasil Di Edit.'
+        // ];
+
+        // return response()->json($response, 200);
     }
 
     /**
