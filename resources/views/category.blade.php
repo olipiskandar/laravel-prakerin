@@ -163,163 +163,64 @@
     </header>
     <!-- ##### Header Area End ##### -->
 
-    <!-- ##### Hero Area Start ##### -->
-    <div class="hero-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="hero-slides owl-carousel">
-                        <!-- Single Blog Post -->
-                        <div class="single-blog-post d-flex align-items-center mb-50">
-                            <div class="post-thumb">
-                                <a href="#"><img src="img/bg-img/1.jpg" alt=""></a>
-                            </div>
-                            <div class="post-data">
-                                <a href="#" class="post-title">
-                                    <h6>Man Rescued Injured Bird, And Now He Probably Wishes He Hadn’t</h6>
-                                </a>
-                                <div class="post-meta">
-                                    <p class="post-date"><a href="#">2 Days Ago</a></p>
-                                </div>
-                            </div>
-                        </div>
+    <!-- ##### Viral News Breadcumb Area Start ##### -->
+    <div class="viral-news-breadcumb-area section-padding-50">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
 
-                        <!-- Single Blog Post -->
-                        <div class="single-blog-post d-flex align-items-center mb-50">
-                            <div class="post-thumb">
-                                <a href="#"><img src="img/bg-img/2.jpg" alt=""></a>
-                            </div>
-                            <div class="post-data">
-                                <a href="#" class="post-title">
-                                    <h6>This 76-year-old Grandmother Lives Alone In Siberia And Skates</h6>
-                                </a>
-                                <div class="post-meta">
-                                    <p class="post-date"><a href="#">3 Days Ago</a></p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Blog Post -->
-                        <div class="single-blog-post d-flex align-items-center mb-50">
-                            <div class="post-thumb">
-                                <a href="#"><img src="img/bg-img/3.jpg" alt=""></a>
-                            </div>
-                            <div class="post-data">
-                                <a href="#" class="post-title">
-                                    <h6>Mother Saves Her Daughter During A Talent Show, And Now Everyone Is Crying</h6>
-                                </a>
-                                <div class="post-meta">
-                                    <p class="post-date"><a href="#">2 Days Ago</a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <!-- Breadcumb Area -->
+                <div class="col-12 col-md-4">
+                    <h3>Trending</h3>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Trending</li>
+                        </ol>
+                    </nav>
                 </div>
 
-            </div>
-        </div>
-    </div>
-    <!-- ##### Hero Area End ##### -->
-
-    <!-- ##### Welcome Slide Area Start ##### -->
-    <div class="welcome-slide-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="welcome-slides owl-carousel">
-
-                        <!-- Single Welcome Slide -->
-                        <div class="single-welcome-slide">
-                            <div class="row no-gutters">
-                                <div class="col-12 col-lg-8">
-                                    <!-- Welcome Post -->
-                                    <div class="welcome-post">
-                                        <img src="img/bg-img/bg1.jpg" alt="">
-                                        <div class="post-content" data-animation="fadeInUp" data-duration="500ms">
-                                            <a href="#" class="tag">Travel</a>
-                                            <a href="#" class="post-title">10 Tips to travel in style for less</a>
-                                            <p>1 day ago</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-12 col-lg-4">
-                                    <div class="welcome-posts--">
-                                        <!-- Welcome Post -->
-                                        <div class="welcome-post style-2">
-                                            <img src="img/bg-img/bg2.jpg" alt="">
-                                            <div class="post-content" data-animation="fadeInUp" data-delay="500ms" data-duration="500ms">
-                                                <a href="#" class="tag tag-2">Celebs</a>
-                                                <a href="#" class="post-title">Superstar spoted with new boyfriend</a>
-                                                <p>1 day ago</p>
-                                            </div>
-                                        </div>
-
-                                        <!-- Welcome Post -->
-                                        <div class="welcome-post style-2">
-                                            <img src="img/bg-img/bg3.jpg" alt="">
-                                            <div class="post-content" data-animation="fadeInUp" data-delay="750ms" data-duration="500ms">
-                                                <a href="#" class="tag tag-3">4 Fun</a>
-                                                <a href="#" class="post-title">Festival looks for all the party people</a>
-                                                <p>1 day ago</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <!-- Single Welcome Slide -->
-                        <div class="single-welcome-slide">
-                            <div class="row no-gutters">
-                                <div class="col-12 col-lg-8">
-                                    <!-- Welcome Post -->
-                                    <div class="welcome-post">
-                                        <img src="img/bg-img/bg1.jpg" alt="">
-                                        <div class="post-content" data-animation="fadeInUp" data-duration="500ms">
-                                            <a href="#" class="tag">Travel</a>
-                                            <a href="#" class="post-title">10 Tips to travel in style for less</a>
-                                            <p>1 day ago</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-12 col-lg-4">
-                                    <div class="welcome-posts--">
-                                        <!-- Welcome Post -->
-                                        <div class="welcome-post style-2">
-                                            <img src="img/bg-img/bg2.jpg" alt="">
-                                            <div class="post-content" data-animation="fadeInUp" data-delay="500ms" data-duration="500ms">
-                                                <a href="#" class="tag tag-2">Celebs</a>
-                                                <a href="#" class="post-title">Superstar spoted with new boyfriend</a>
-                                                <p>1 day ago</p>
-                                            </div>
-                                        </div>
-
-                                        <!-- Welcome Post -->
-                                        <div class="welcome-post style-2">
-                                            <img src="img/bg-img/bg3.jpg" alt="">
-                                            <div class="post-content" data-animation="fadeInUp" data-delay="750ms" data-duration="500ms">
-                                                <a href="#" class="tag tag-3">4 Fun</a>
-                                                <a href="#" class="post-title">Festival looks for all the party people</a>
-                                                <p>1 day ago</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+                <!-- Add Widget -->
+                <div class="col-12 col-md-8">
+                    <div class="add-widget">
+                        <a href="#"><img src="img/bg-img/add2.png" alt=""></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- ##### Welcome Slide Area End ##### -->
+    <!-- ##### Viral News Breadcumb Area End ##### -->
 
     <!-- ##### Blog Post Area Start ##### -->
     <div class="viral-story-blog-post section-padding-0-50">
+
+        <!-- Catagory Featured Post -->
+        <div class="catagory-featured-post section-padding-100">
+            <div class="container">
+                <div class="row">
+                    <!-- Catagory Thumbnail -->
+                    <div class="col-12 col-md-7">
+                        <div class="cata-thumbnail">
+                            <a href="#"><img src="img/bg-img/18.jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <!-- Catagory Content -->
+                    <div class="col-12 col-md-5">
+                        <div class="cata-content">
+                            <a href="#" class="post-catagory">Finance</a>
+                            <a href="#">
+                                <h2>This Is How Notebooks Of An Artist Who Travels Around The World Look Like</h2>
+                            </a>
+                            <div class="post-meta">
+                                <p class="post-author">By <a href="#">Michael Smithson</a></p>
+                                <p class="post-date">5 Hours Ago</p>
+                            </div>
+                            <p class="post-excerp">Donec turpis erat, scelerisque id sit amet, fermentum vel dolor. Nulla facilisi. Sed lectus et accumsan aliquam. Fusce lobortis cursus quam, id mattis sapien...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="container">
             <div class="row">
                 <!-- Blog Posts Area -->
