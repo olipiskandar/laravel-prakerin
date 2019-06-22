@@ -20,6 +20,10 @@ Route::get('category', function () {
     return view('category');
 });
 
+Route::get('single', function () {
+    return view('single');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
