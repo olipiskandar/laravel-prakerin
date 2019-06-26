@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "84c773b120fb008429ef4d31fbf138bf",
+    "content-hash": "d378840d8ea9d7dc196d75e2188f8884",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4096,6 +4096,47 @@
                 "xunit"
             ],
             "time": "2019-06-19T12:01:51+00:00"
+        },
+        {
+            "name": "pipe-dream/laravel",
+            "version": "v0.0.69",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pipe-dream/laravel.git",
+                "reference": "576a58ec50600764c60e4dadb98d26fb4d7daf60"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pipe-dream/laravel/zipball/576a58ec50600764c60e4dadb98d26fb4d7daf60",
+                "reference": "576a58ec50600764c60e4dadb98d26fb4d7daf60",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3"
+            },
+            "type": "package",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "PipeDream\\Laravel\\PipeDreamServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "PipeDream\\Laravel\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Watch how this package DESTROYS all other generators. Boilerplate repos HATE it!",
+            "keywords": [
+                "laravel",
+                "package"
+            ],
+            "time": "2019-06-25T12:21:26+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",

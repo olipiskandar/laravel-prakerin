@@ -1,21 +1,21 @@
-(function ($) {
+(function($) {
     "use strict";
 
     var browserWindow = $(window);
 
     // :: 1.0 Preloader Active Code
-    browserWindow.on("load", function () {
-        $("#preloader").fadeOut("slow", function () {
+    browserWindow.on("load", function() {
+        $("#preloader").fadeOut("slow", function() {
             $(this).remove();
         });
     });
 
     // :: 2.0 Slides Active Code
     if ($.fn.owlCarousel) {
-
-        var heroSlide = $(".hero-slides");
+        var heroSlide = $(".hero-slidessss");
         heroSlide.owlCarousel({
             items: 3,
+            lazyLoad: true,
             margin: 30,
             loop: true,
             nav: false,
@@ -50,30 +50,36 @@
             autoplayHoverPause: true
         });
 
-        welcomeSlide.on("translate.owl.carousel", function () {
+        welcomeSlide.on("translate.owl.carousel", function() {
             var slideLayer = $("[data-animation]");
-            slideLayer.each(function () {
-                var anim_name = $(this).data('animation');
-                $(this).removeClass('animated ' + anim_name).css('opacity', '0');
+            slideLayer.each(function() {
+                var anim_name = $(this).data("animation");
+                $(this)
+                    .removeClass("animated " + anim_name)
+                    .css("opacity", "0");
             });
         });
 
-        welcomeSlide.on('translated.owl.carousel', function () {
-            var slideLayer = welcomeSlide.find('.owl-item.active').find("[data-animation]");
-            slideLayer.each(function () {
-                var anim_name = $(this).data('animation');
-                $(this).addClass('animated ' + anim_name).css('opacity', '1');
+        welcomeSlide.on("translated.owl.carousel", function() {
+            var slideLayer = welcomeSlide
+                .find(".owl-item.active")
+                .find("[data-animation]");
+            slideLayer.each(function() {
+                var anim_name = $(this).data("animation");
+                $(this)
+                    .addClass("animated " + anim_name)
+                    .css("opacity", "1");
             });
         });
 
-        $("[data-delay]").each(function () {
-            var anim_del = $(this).data('delay');
-            $(this).css('animation-delay', anim_del);
+        $("[data-delay]").each(function() {
+            var anim_del = $(this).data("delay");
+            $(this).css("animation-delay", anim_del);
         });
 
-        $("[data-duration]").each(function () {
-            var anim_dur = $(this).data('duration');
-            $(this).css('animation-duration', anim_dur);
+        $("[data-duration]").each(function() {
+            var anim_dur = $(this).data("duration");
+            $(this).css("animation-duration", anim_dur);
         });
     }
 
@@ -82,19 +88,19 @@
         $.simpleTicker($("#breakingNewsTicker"), {
             speed: 1000,
             delay: 3000,
-            easing: 'swing',
-            effectType: 'roll'
+            easing: "swing",
+            effectType: "roll"
         });
     }
     // :: 4.0 Nav Active Code
     if ($.fn.classyNav) {
-        $('#viralnewsNav').classyNav();
+        $("#viralnewsNav").classyNav();
     }
 
     // :: 5.0 Gallery Active Code
     if ($.fn.magnificPopup) {
-        $('.videoPlayer').magnificPopup({
-            type: 'iframe'
+        $(".videoPlayer").magnificPopup({
+            type: "iframe"
         });
     }
 
@@ -108,7 +114,7 @@
 
     // :: 7.0 CouterUp Active Code
     if ($.fn.counterUp) {
-        $('.counter').counterUp({
+        $(".counter").counterUp({
             delay: 10,
             time: 2000
         });
@@ -127,24 +133,23 @@
     }
 
     // :: 10.0 prevent default a click
-    $('a[href="#"]').on('click', function ($) {
+    $('a[href="#"]').on("click", function($) {
         $.preventDefault();
     });
 
     // :: 11.0 Search Form Active Code
-    var searchbtn = $('#searchbtn');
-    var viral_search_form = $('.viral-search-form');
-    var navbar_toggler = $('.classy-navbar-toggler');
+    var searchbtn = $("#searchbtn");
+    var viral_search_form = $(".viral-search-form");
+    var navbar_toggler = $(".classy-navbar-toggler");
 
-    searchbtn.on('click', function () {
-        $(this).toggleClass('fa-close');
-        viral_search_form.toggleClass('active');
+    searchbtn.on("click", function() {
+        $(this).toggleClass("fa-close");
+        viral_search_form.toggleClass("active");
     });
-    navbar_toggler.on('click', function () {
-        viral_search_form.removeClass('active');
+    navbar_toggler.on("click", function() {
+        viral_search_form.removeClass("active");
     });
-    navbar_toggler.on('click', function () {
-        searchbtn.removeClass('fa-close');
+    navbar_toggler.on("click", function() {
+        searchbtn.removeClass("fa-close");
     });
-
 })(jQuery);

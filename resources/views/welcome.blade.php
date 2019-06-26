@@ -12,11 +12,10 @@
     <title>Viral Story - Viral News Magazine Template</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="img/core-img/favicon.ico">
+    <link rel="icon" href="{{ asset('img/core-img/favicon.ico') }}">
 
     <!-- Core Stylesheet -->
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="{{ asset('style.css') }}">
 </head>
 
 <body>
@@ -150,7 +149,7 @@
 
                                 <!-- Video Post Button -->
                                 <div class="add-post-button">
-                                    <a href="#" class="btn add-post-btn">Add Post</a>
+                                    <button id="add-post-btn" class="btn add-post-btn" onclick="loadContent()">Add Post</button>
                                 </div>
 
                             </div>
@@ -167,10 +166,9 @@
     <div class="hero-area">
         <div class="container">
             <div class="row">
-                <div class="col-12">
+                <div class="col-12 top-news">
                     <div class="hero-slides owl-carousel">
-                        <!-- Single Blog Post -->
-                        <div class="single-blog-post d-flex align-items-center mb-50">
+                        <div class="single-blog-post d-flex align-items-center mb-50" >
                             <div class="post-thumb">
                                 <a href="#"><img src="img/bg-img/1.jpg" alt=""></a>
                             </div>
@@ -183,39 +181,8 @@
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Single Blog Post -->
-                        <div class="single-blog-post d-flex align-items-center mb-50">
-                            <div class="post-thumb">
-                                <a href="#"><img src="img/bg-img/2.jpg" alt=""></a>
-                            </div>
-                            <div class="post-data">
-                                <a href="#" class="post-title">
-                                    <h6>This 76-year-old Grandmother Lives Alone In Siberia And Skates</h6>
-                                </a>
-                                <div class="post-meta">
-                                    <p class="post-date"><a href="#">3 Days Ago</a></p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Blog Post -->
-                        <div class="single-blog-post d-flex align-items-center mb-50">
-                            <div class="post-thumb">
-                                <a href="#"><img src="img/bg-img/3.jpg" alt=""></a>
-                            </div>
-                            <div class="post-data">
-                                <a href="#" class="post-title">
-                                    <h6>Mother Saves Her Daughter During A Talent Show, And Now Everyone Is Crying</h6>
-                                </a>
-                                <div class="post-meta">
-                                    <p class="post-date"><a href="#">2 Days Ago</a></p>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
@@ -319,7 +286,7 @@
     <!-- ##### Welcome Slide Area End ##### -->
 
     <!-- ##### Blog Post Area Start ##### -->
-    <div class="viral-story-blog-post section-padding-0-50">
+    <div class="viral-story-blog-post section-padding-0-50" id="blog">
         <div class="container">
             <div class="row">
                 <!-- Blog Posts Area -->
@@ -752,8 +719,8 @@
                     <div class="col-12">
                         <!-- Copywrite -->
                         <p><a href="#"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                     </div>
                 </div>
             </div>
@@ -763,15 +730,105 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
     <!-- ##### All Javascript Files ##### -->
     <!-- jQuery-2.2.4 js -->
-    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="{{ asset('js/jquery/jquery-2.2.4.min.js') }}"></script>
     <!-- Popper js -->
-    <script src="js/bootstrap/popper.min.js"></script>
+    <script src="{{ asset('js/bootstrap/popper.min.js') }}"></script>
     <!-- Bootstrap js -->
-    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="{{ asset('js/bootstrap/bootstrap.min.js') }}"></script>
     <!-- All Plugins js -->
-    <script src="js/plugins/plugins.js"></script>
+    <script src="{{ asset('js/plugins/plugins.js') }}"></script>
     <!-- Active js -->
-    <script src="js/active.js"></script>
+    <script src="{{ asset('js/active.js') }}"></script>
+
+    <script>
+    // var url = "api/front";
+    // fetch(url).then(response => response.json())
+    //     .then(function(getdata){
+
+    //     $.each(getdata.data.top, function(key, value){
+    //         $('.hero-slides').append(
+    //             '<div class="single-blog-post d-flex align-items-center mb-50" ><div class="post-thumb"><a href="#"><img src="img/bg-img/1.jpg" alt=""></a></div><div class="post-data"><a href="#" class="post-title"><h6>Man Rescued Injured Bird, And Now He Probably Wishes He Hadn’t</h6></a><div class="post-meta"><p class="post-date"><a href="#">3 Days Ago</a></p></div></div></div>'
+    //         );
+    //     });
+    // }).catch(function(e){
+    //     console.log(e)
+    // });
+
+
+    $(document).ready(function() {
+        // Top News
+        $.ajax({
+            url: 'api/front',
+            dataType: 'json',
+            success: function(getdata) {
+                $('.top-news').html('<div id="top-content" class="hero-slides owl-carousel"></div>');
+                for(var i=0;i<getdata.data["top"].length;i++){
+                    $(".hero-slides").append('<div class="single-blog-post d-flex align-items-center mb-50"><div class="post-thumb"><a href="'+getdata.data["top"][i].slug+'"><img src="'+getdata.data["top"][i].image+'" alt=""></a></div><div class="post-data"><a href="'+getdata.data["top"][i].slug+'" class="post-title"><h6>'+getdata.data["top"][i].title+'</h6></a><div class="post-meta"><p class="post-date"><a href="'+getdata.data["top"][i].slug+'">2 Days Ago</a></p></div></div></div>');
+                };
+                var heroSlide = $("#top-content");
+                heroSlide.owlCarousel({
+                    items: 3,
+                    lazyLoad: true,
+                    margin: 30,
+                    loop: true,
+                    nav: false,
+                    dots: false,
+                    autoplay: true,
+                    autoplayTimeout: 5000,
+                    smartSpeed: 1000,
+                    autoplayHoverPause: true,
+                    responsive: {
+                        0: {
+                            items: 1
+                        },
+                        768: {
+                            items: 2
+                        },
+                        992: {
+                            items: 3
+                        }
+                    },
+                });
+            }
+        });
+
+        // Headline News
+        $.ajax({
+            url: 'api/front',
+            dataType: 'json',
+            success: function(getdata) {
+                $('.top-news').html('<div id="top-content" class="hero-slides owl-carousel"></div>');
+                for(var i=0;i<getdata.data["top"].length;i++){
+                    $(".hero-slides").append('<div class="single-blog-post d-flex align-items-center mb-50"><div class="post-thumb"><a href="'+getdata.data["top"][i].slug+'"><img src="'+getdata.data["top"][i].image+'" alt=""></a></div><div class="post-data"><a href="'+getdata.data["top"][i].slug+'" class="post-title"><h6>'+getdata.data["top"][i].title+'</h6></a><div class="post-meta"><p class="post-date"><a href="'+getdata.data["top"][i].slug+'">2 Days Ago</a></p></div></div></div>');
+                };
+                var heroSlide = $("#top-content");
+                heroSlide.owlCarousel({
+                    items: 3,
+                    lazyLoad: true,
+                    margin: 30,
+                    loop: true,
+                    nav: false,
+                    dots: false,
+                    autoplay: true,
+                    autoplayTimeout: 5000,
+                    smartSpeed: 1000,
+                    autoplayHoverPause: true,
+                    responsive: {
+                        0: {
+                            items: 1
+                        },
+                        768: {
+                            items: 2
+                        },
+                        992: {
+                            items: 3
+                        }
+                    },
+                });
+            }
+        });
+    });
+    </script>
 </body>
 
 </html>
