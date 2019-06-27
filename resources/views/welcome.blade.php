@@ -31,7 +31,7 @@
                             <!-- Breaking News Area -->
                             <div class="top-breaking-news-area">
                                 <div id="breakingNewsTicker" class="ticker">
-                                    <ul>
+                                    <ul class="headline">
                                         <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
                                         <li><a href="#">Welcome to Colorlib Family.</a></li>
                                         <li><a href="#">Nam eu metus sitsit amet, consec!</a></li>
@@ -77,61 +77,8 @@
 
                             <!-- Nav Start -->
                             <div class="classynav">
-                                <ul>
-                                    <li class="active"><a href="catagory.html">Top 10</a></li>
-                                    <li><a href="#">Pages</a>
-                                        <ul class="dropdown">
-                                            <li><a href="index.html">Home</a></li>
-                                            <li><a href="catagory.html">Catagories</a></li>
-                                            <li><a href="single-post.html">Single Article</a></li>
-                                            <li><a href="quize-article.html">Quize Article</a></li>
-                                            <li><a href="contact.html">Contact</a></li>
-                                            <li><a href="#">Dropdown</a>
-                                                <ul class="dropdown">
-                                                    <li><a href="index.html">Home</a></li>
-                                                    <li><a href="catagory.html">Catagories</a></li>
-                                                    <li><a href="single-post.html">Single Article</a></li>
-                                                    <li><a href="quize-article.html">Quize Article</a></li>
-                                                    <li><a href="contact.html">Contact</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="index.html">Funny</a></li>
-                                    <li><a href="index.html">Videos</a></li>
-                                    <li><a href="index.html">Don’t Miss</a></li>
-                                    <li><a href="#">Mega Menu</a>
-                                        <div class="megamenu">
-                                            <ul class="single-mega cn-col-4">
-                                                <li><a href="index.html">Home</a></li>
-                                                <li><a href="catagory.html">Catagories</a></li>
-                                                <li><a href="single-post.html">Single Article</a></li>
-                                                <li><a href="quize-article.html">Quize Article</a></li>
-                                                <li><a href="contact.html">Contact</a></li>
-                                            </ul>
-                                            <ul class="single-mega cn-col-4">
-                                                <li><a href="index.html">Home</a></li>
-                                                <li><a href="catagory.html">Catagories</a></li>
-                                                <li><a href="single-post.html">Single Article</a></li>
-                                                <li><a href="quize-article.html">Quize Article</a></li>
-                                                <li><a href="contact.html">Contact</a></li>
-                                            </ul>
-                                            <ul class="single-mega cn-col-4">
-                                                <li><a href="index.html">Home</a></li>
-                                                <li><a href="catagory.html">Catagories</a></li>
-                                                <li><a href="single-post.html">Single Article</a></li>
-                                                <li><a href="quize-article.html">Quize Article</a></li>
-                                                <li><a href="contact.html">Contact</a></li>
-                                            </ul>
-                                            <ul class="single-mega cn-col-4">
-                                                <li><a href="index.html">Home</a></li>
-                                                <li><a href="catagory.html">Catagories</a></li>
-                                                <li><a href="single-post.html">Single Article</a></li>
-                                                <li><a href="quize-article.html">Quize Article</a></li>
-                                                <li><a href="contact.html">Contact</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
+                                <ul class="up-menu">
+                                {{-- API Front Menu --}}
                                 </ul>
 
                                 <!-- Search Button -->
@@ -149,7 +96,7 @@
 
                                 <!-- Video Post Button -->
                                 <div class="add-post-button">
-                                    <button id="add-post-btn" class="btn add-post-btn" onclick="loadContent()">Add Post</button>
+                                    <button id="add-post-btn" class="btn add-post-btn" >Login</button>
                                 </div>
 
                             </div>
@@ -166,23 +113,8 @@
     <div class="hero-area">
         <div class="container">
             <div class="row">
-                <div class="col-12 top-news">
-                    <div class="hero-slides owl-carousel">
-                        <div class="single-blog-post d-flex align-items-center mb-50" >
-                            <div class="post-thumb">
-                                <a href="#"><img src="img/bg-img/1.jpg" alt=""></a>
-                            </div>
-                            <div class="post-data">
-                                <a href="#" class="post-title">
-                                    <h6>Man Rescued Injured Bird, And Now He Probably Wishes He Hadn’t</h6>
-                                </a>
-                                <div class="post-meta">
-                                    <p class="post-date"><a href="#">2 Days Ago</a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {{-- API Front Top --}}
+                <div class="col-12 top-news"></div>
             </div>
         </div>
     </div>
@@ -291,193 +223,17 @@
             <div class="row">
                 <!-- Blog Posts Area -->
                 <div class="col-12 col-lg-8">
-                    <div class="row">
 
-                        <!-- Single Blog Post -->
-                        <div class="col-12 col-lg-6">
-                            <div class="single-blog-post style-3">
-                                <!-- Post Thumb -->
-                                <div class="post-thumb">
-                                    <a href="#"><img src="img/bg-img/7.jpg" alt=""></a>
-                                </div>
-                                <!-- Post Data -->
-                                <div class="post-data">
-                                    <a href="#" class="post-catagory">Finance</a>
-                                    <a href="#" class="post-title">
-                                        <h6>This Is How Notebooks Of An Artist Who Travels Around The World Look</h6>
-                                    </a>
-                                    <div class="post-meta">
-                                        <p class="post-author">By <a href="#">Michael Smithson</a></p>
-                                        <p class="post-date">5 Hours Ago</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Blog Post -->
-                        <div class="col-12 col-lg-6">
-                            <div class="single-blog-post style-3">
-                                <!-- Post Thumb -->
-                                <div class="post-thumb">
-                                    <a href="#"><img src="img/bg-img/8.jpg" alt=""></a>
-                                </div>
-                                <!-- Post Data -->
-                                <div class="post-data">
-                                    <a href="#" class="post-catagory cat-3">4 Fun</a>
-                                    <a href="#" class="post-title">
-                                        <h6>10 Tips on how to have the best pool party on a small budget</h6>
-                                    </a>
-                                    <div class="post-meta">
-                                        <p class="post-author">By <a href="#">Michael Smithson</a></p>
-                                        <p class="post-date">5 Hours Ago</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Blog Post -->
-                        <div class="col-12 col-lg-6">
-                            <div class="single-blog-post style-3">
-                                <!-- Post Thumb -->
-                                <div class="post-thumb">
-                                    <a href="#"><img src="img/bg-img/9.jpg" alt=""></a>
-                                </div>
-                                <!-- Post Data -->
-                                <div class="post-data">
-                                    <a href="#" class="post-catagory">Finance</a>
-                                    <a href="#" class="post-title">
-                                        <h6>This Is How Notebooks Of An Artist Who Travels Around The World Look</h6>
-                                    </a>
-                                    <div class="post-meta">
-                                        <p class="post-author">By <a href="#">Michael Smithson</a></p>
-                                        <p class="post-date">5 Hours Ago</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Blog Post -->
-                        <div class="col-12 col-lg-6">
-                            <div class="single-blog-post style-3">
-                                <!-- Post Thumb -->
-                                <div class="post-thumb">
-                                    <a href="#"><img src="img/bg-img/10.jpg" alt=""></a>
-                                </div>
-                                <!-- Post Data -->
-                                <div class="post-data">
-                                    <a href="#" class="post-catagory cat-3">4 Fun</a>
-                                    <a href="#" class="post-title">
-                                        <h6>10 Tips on how to have the best pool party on a small budget</h6>
-                                    </a>
-                                    <div class="post-meta">
-                                        <p class="post-author">By <a href="#">Michael Smithson</a></p>
-                                        <p class="post-date">5 Hours Ago</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Blog Post -->
-                        <div class="col-12 col-lg-6">
-                            <div class="single-blog-post style-3">
-                                <!-- Post Thumb -->
-                                <div class="post-thumb">
-                                    <a href="#"><img src="img/bg-img/11.jpg" alt=""></a>
-                                </div>
-                                <!-- Post Data -->
-                                <div class="post-data">
-                                    <a href="#" class="post-catagory cat-2">Travel</a>
-                                    <a href="#" class="post-title">
-                                        <h6>This Is How Notebooks Of An Artist Who Travels Around The World Look</h6>
-                                    </a>
-                                    <div class="post-meta">
-                                        <p class="post-author">By <a href="#">Michael Smithson</a></p>
-                                        <p class="post-date">5 Hours Ago</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Blog Post -->
-                        <div class="col-12 col-lg-6">
-                            <div class="single-blog-post style-3">
-                                <!-- Post Thumb -->
-                                <div class="post-thumb">
-                                    <a href="#"><img src="img/bg-img/12.jpg" alt=""></a>
-                                </div>
-                                <!-- Post Data -->
-                                <div class="post-data">
-                                    <a href="#" class="post-catagory cat-4">featured</a>
-                                    <a href="#" class="post-title">
-                                        <h6>10 Tips on how to have the best pool party on a small budget</h6>
-                                    </a>
-                                    <div class="post-meta">
-                                        <p class="post-author">By <a href="#">Michael Smithson</a></p>
-                                        <p class="post-date">5 Hours Ago</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Blog Post -->
-                        <div class="col-12 col-lg-6">
-                            <div class="single-blog-post style-3">
-                                <!-- Post Thumb -->
-                                <div class="post-thumb">
-                                    <a href="#"><img src="img/bg-img/13.jpg" alt=""></a>
-                                </div>
-                                <!-- Post Data -->
-                                <div class="post-data">
-                                    <a href="#" class="post-catagory">Finance</a>
-                                    <a href="#" class="post-title">
-                                        <h6>This Is How Notebooks Of An Artist Who Travels Around The World Look</h6>
-                                    </a>
-                                    <div class="post-meta">
-                                        <p class="post-author">By <a href="#">Michael Smithson</a></p>
-                                        <p class="post-date">5 Hours Ago</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Blog Post -->
-                        <div class="col-12 col-lg-6">
-                            <div class="single-blog-post style-3">
-                                <!-- Post Thumb -->
-                                <div class="post-thumb">
-                                    <a href="#"><img src="img/bg-img/14.jpg" alt=""></a>
-                                </div>
-                                <!-- Post Data -->
-                                <div class="post-data">
-                                    <a href="#" class="post-catagory cat-3">4 Fun</a>
-                                    <a href="#" class="post-title">
-                                        <h6>10 Tips on how to have the best pool party on a small budget</h6>
-                                    </a>
-                                    <div class="post-meta">
-                                        <p class="post-author">By <a href="#">Michael Smithson</a></p>
-                                        <p class="post-date">5 Hours Ago</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
+                    {{-- API Front Article --}}
+                    <div class="row article-post"></div>
 
                     <div class="row">
                         <div class="col-12">
                             <div class="viral-news-pagination">
                                 <nav aria-label="Page navigation example">
-                                    <ul class="pagination">
-                                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">01</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">02</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">03</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">04</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">05</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">...</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">15</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                                    </ul>
+                                    <button class="add-post-btn" href="#" style="width: 100%">
+                                        <strong>Load more</strong>
+                                    </button>
                                 </nav>
                             </div>
                         </div>
@@ -499,63 +255,9 @@
                         </div>
 
                         <!-- Trending Articles Widget -->
-                        <div class="treading-articles-widget mb-70">
+                        <div class="treading-articles-widget mb-70 trending">
                             <h4>Trending Articles</h4>
-
-                            <!-- Single Trending Articles -->
-                            <div class="single-blog-post style-4">
-                                <!-- Post Thumb -->
-                                <div class="post-thumb">
-                                    <a href="#"><img src="img/bg-img/15.jpg" alt=""></a>
-                                    <span class="serial-number">01.</span>
-                                </div>
-                                <!-- Post Data -->
-                                <div class="post-data">
-                                    <a href="#" class="post-title">
-                                        <h6>This Is How Notebooks Of An Artist Who Travels Around The World Look</h6>
-                                    </a>
-                                    <div class="post-meta">
-                                        <p class="post-author">By <a href="#">Michael Smithson</a></p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Single Trending Articles -->
-                            <div class="single-blog-post style-4">
-                                <!-- Post Thumb -->
-                                <div class="post-thumb">
-                                    <a href="#"><img src="img/bg-img/16.jpg" alt=""></a>
-                                    <span class="serial-number">02.</span>
-                                </div>
-                                <!-- Post Data -->
-                                <div class="post-data">
-                                    <a href="#" class="post-title">
-                                        <h6>Artist Recreates People’s Childhood Memories With Realistic Dioramas</h6>
-                                    </a>
-                                    <div class="post-meta">
-                                        <p class="post-author">By <a href="#">Michael Smithson</a></p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Single Trending Articles -->
-                            <div class="single-blog-post style-4">
-                                <!-- Post Thumb -->
-                                <div class="post-thumb">
-                                    <a href="#"><img src="img/bg-img/17.jpg" alt=""></a>
-                                    <span class="serial-number">03.</span>
-                                </div>
-                                <!-- Post Data -->
-                                <div class="post-data">
-                                    <a href="#" class="post-title">
-                                        <h6>Artist Recreates People’s Childhood Memories With Realistic Dioramas</h6>
-                                    </a>
-                                    <div class="post-meta">
-                                        <p class="post-author">By <a href="#">Michael Smithson</a></p>
-                                    </div>
-                                </div>
-                            </div>
-
+                            {{-- API Front Trending --}}
                         </div>
 
                         <!-- Add Widget -->
@@ -657,55 +359,9 @@
 
                     <!-- Footer Widget Area -->
                     <div class="col-12 col-md-6 col-lg-4">
-                        <div class="footer-widget-area">
+                        <div class="footer-widget-area latest">
                             <!-- Widget Title -->
                             <h4 class="widget-title">Latest articles</h4>
-
-                            <!-- Single Latest Post -->
-                            <div class="single-blog-post style-2 d-flex align-items-center">
-                                <div class="post-thumb">
-                                    <a href="#"><img src="img/bg-img/4.jpg" alt=""></a>
-                                </div>
-                                <div class="post-data">
-                                    <a href="#" class="post-title">
-                                        <h6>Pellentesque mattis arcu massa, nec fringilla turpis eleifend id.</h6>
-                                    </a>
-                                    <div class="post-meta">
-                                        <p class="post-date"><a href="#">7:00 AM | April 14</a></p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Single Latest Post -->
-                            <div class="single-blog-post style-2 d-flex align-items-center">
-                                <div class="post-thumb">
-                                    <a href="#"><img src="img/bg-img/5.jpg" alt=""></a>
-                                </div>
-                                <div class="post-data">
-                                    <a href="#" class="post-title">
-                                        <h6>Sed a elit euismod augue semper congue sit amet ac.</h6>
-                                    </a>
-                                    <div class="post-meta">
-                                        <p class="post-date"><a href="#">7:00 AM | April 14</a></p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Single Latest Post -->
-                            <div class="single-blog-post style-2 d-flex align-items-center">
-                                <div class="post-thumb">
-                                    <a href="#"><img src="img/bg-img/6.jpg" alt=""></a>
-                                </div>
-                                <div class="post-data">
-                                    <a href="#" class="post-title">
-                                        <h6>Pellentesque mattis arcu massa, nec fringilla turpis eleifend id.</h6>
-                                    </a>
-                                    <div class="post-meta">
-                                        <p class="post-date"><a href="#">7:00 AM | April 14</a></p>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
                 </div>
@@ -738,96 +394,25 @@
     <!-- All Plugins js -->
     <script src="{{ asset('js/plugins/plugins.js') }}"></script>
     <!-- Active js -->
+    <script src="{{ asset('js/jquery-ias.min.js') }}"></script>
     <script src="{{ asset('js/active.js') }}"></script>
 
+    <script type="text/javascript">
+        var ias = jQuery.ias({
+            container:  '#container',
+            item:       '.post',
+            pagination: '#pagination',
+            next:       '#pagination a.next'
+        });
+
+        ias.extension(new IASSpinnerExtension());
+        ias.extension(new IASTriggerExtension({offset: 2}));
+        ias.extension(new IASNoneLeftExtension({text: "You reached the end"}));
+        ias.extension(new IASPagingExtension());
+        ias.extension(new IASHistoryExtension({prev: '#pagination a.prev'}));
+    </script>
     <script>
-    // var url = "api/front";
-    // fetch(url).then(response => response.json())
-    //     .then(function(getdata){
 
-    //     $.each(getdata.data.top, function(key, value){
-    //         $('.hero-slides').append(
-    //             '<div class="single-blog-post d-flex align-items-center mb-50" ><div class="post-thumb"><a href="#"><img src="img/bg-img/1.jpg" alt=""></a></div><div class="post-data"><a href="#" class="post-title"><h6>Man Rescued Injured Bird, And Now He Probably Wishes He Hadn’t</h6></a><div class="post-meta"><p class="post-date"><a href="#">3 Days Ago</a></p></div></div></div>'
-    //         );
-    //     });
-    // }).catch(function(e){
-    //     console.log(e)
-    // });
-
-
-    $(document).ready(function() {
-        // Top News
-        $.ajax({
-            url: 'api/front',
-            dataType: 'json',
-            success: function(getdata) {
-                $('.top-news').html('<div id="top-content" class="hero-slides owl-carousel"></div>');
-                for(var i=0;i<getdata.data["top"].length;i++){
-                    $(".hero-slides").append('<div class="single-blog-post d-flex align-items-center mb-50"><div class="post-thumb"><a href="'+getdata.data["top"][i].slug+'"><img src="'+getdata.data["top"][i].image+'" alt=""></a></div><div class="post-data"><a href="'+getdata.data["top"][i].slug+'" class="post-title"><h6>'+getdata.data["top"][i].title+'</h6></a><div class="post-meta"><p class="post-date"><a href="'+getdata.data["top"][i].slug+'">2 Days Ago</a></p></div></div></div>');
-                };
-                var heroSlide = $("#top-content");
-                heroSlide.owlCarousel({
-                    items: 3,
-                    lazyLoad: true,
-                    margin: 30,
-                    loop: true,
-                    nav: false,
-                    dots: false,
-                    autoplay: true,
-                    autoplayTimeout: 5000,
-                    smartSpeed: 1000,
-                    autoplayHoverPause: true,
-                    responsive: {
-                        0: {
-                            items: 1
-                        },
-                        768: {
-                            items: 2
-                        },
-                        992: {
-                            items: 3
-                        }
-                    },
-                });
-            }
-        });
-
-        // Headline News
-        $.ajax({
-            url: 'api/front',
-            dataType: 'json',
-            success: function(getdata) {
-                $('.top-news').html('<div id="top-content" class="hero-slides owl-carousel"></div>');
-                for(var i=0;i<getdata.data["top"].length;i++){
-                    $(".hero-slides").append('<div class="single-blog-post d-flex align-items-center mb-50"><div class="post-thumb"><a href="'+getdata.data["top"][i].slug+'"><img src="'+getdata.data["top"][i].image+'" alt=""></a></div><div class="post-data"><a href="'+getdata.data["top"][i].slug+'" class="post-title"><h6>'+getdata.data["top"][i].title+'</h6></a><div class="post-meta"><p class="post-date"><a href="'+getdata.data["top"][i].slug+'">2 Days Ago</a></p></div></div></div>');
-                };
-                var heroSlide = $("#top-content");
-                heroSlide.owlCarousel({
-                    items: 3,
-                    lazyLoad: true,
-                    margin: 30,
-                    loop: true,
-                    nav: false,
-                    dots: false,
-                    autoplay: true,
-                    autoplayTimeout: 5000,
-                    smartSpeed: 1000,
-                    autoplayHoverPause: true,
-                    responsive: {
-                        0: {
-                            items: 1
-                        },
-                        768: {
-                            items: 2
-                        },
-                        992: {
-                            items: 3
-                        }
-                    },
-                });
-            }
-        });
-    });
     </script>
 </body>
 
