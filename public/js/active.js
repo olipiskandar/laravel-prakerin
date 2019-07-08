@@ -1,12 +1,12 @@
-(function($) {
+(function ($) {
     "use strict";
 
     var browserWindow = $(window);
     var url = "api/front";
 
     // :: 1.0 Preloader Active Code
-    browserWindow.on("load", function() {
-        $("#preloader").fadeOut("slow", function() {
+    browserWindow.on("load", function () {
+        $("#preloader").fadeOut("slow", function () {
             $(this).remove();
         });
     });
@@ -16,23 +16,23 @@
         $.ajax({
             url: "api/front",
             dataType: "json",
-            success: function(getdata) {
+            success: function (getdata) {
                 $(".top-news").html(
                     '<div id="top-content" class="hero-slides owl-carousel"></div>'
                 );
                 for (var i = 0; i < getdata.data["top"].length; i++) {
                     $(".hero-slides").append(
                         '<div class="single-blog-post d-flex align-items-center mb-50"><div class="post-thumb"><a href="' +
-                            getdata.data["top"][i].slug +
-                            '"><img src="' +
-                            getdata.data["top"][i].image +
-                            '" alt=""></a></div><div class="post-data"><a href="' +
-                            getdata.data["top"][i].slug +
-                            '" class="post-title"><h6>' +
-                            getdata.data["top"][i].title +
-                            '</h6></a><div class="post-meta"><p class="post-date"><a href="' +
-                            getdata.data["top"][i].slug +
-                            '">2 Days Ago</a></p></div></div></div>'
+                        getdata.data["top"][i].slug +
+                        '"><img src="' +
+                        getdata.data["top"][i].image +
+                        '" alt=""></a></div><div class="post-data"><a href="' +
+                        getdata.data["top"][i].slug +
+                        '" class="post-title"><h6>' +
+                        getdata.data["top"][i].title +
+                        '</h6></a><div class="post-meta"><p class="post-date"><a href="' +
+                        getdata.data["top"][i].slug +
+                        '">2 Days Ago</a></p></div></div></div>'
                     );
                 }
                 var heroSlide = $("#top-content");
@@ -75,9 +75,9 @@
             autoplayHoverPause: true
         });
 
-        welcomeSlide.on("translate.owl.carousel", function() {
+        welcomeSlide.on("translate.owl.carousel", function () {
             var slideLayer = $("[data-animation]");
-            slideLayer.each(function() {
+            slideLayer.each(function () {
                 var anim_name = $(this).data("animation");
                 $(this)
                     .removeClass("animated " + anim_name)
@@ -85,11 +85,11 @@
             });
         });
 
-        welcomeSlide.on("translated.owl.carousel", function() {
+        welcomeSlide.on("translated.owl.carousel", function () {
             var slideLayer = welcomeSlide
                 .find(".owl-item.active")
                 .find("[data-animation]");
-            slideLayer.each(function() {
+            slideLayer.each(function () {
                 var anim_name = $(this).data("animation");
                 $(this)
                     .addClass("animated " + anim_name)
@@ -97,12 +97,12 @@
             });
         });
 
-        $("[data-delay]").each(function() {
+        $("[data-delay]").each(function () {
             var anim_del = $(this).data("delay");
             $(this).css("animation-delay", anim_del);
         });
 
-        $("[data-duration]").each(function() {
+        $("[data-duration]").each(function () {
             var anim_dur = $(this).data("duration");
             $(this).css("animation-duration", anim_dur);
         });
@@ -158,7 +158,7 @@
     }
 
     // :: 10.0 prevent default a click
-    $('a[href="#"]').on("click", function($) {
+    $('a[href="#"]').on("click", function ($) {
         $.preventDefault();
     });
 
@@ -167,14 +167,14 @@
     var viral_search_form = $(".viral-search-form");
     var navbar_toggler = $(".classy-navbar-toggler");
 
-    searchbtn.on("click", function() {
+    searchbtn.on("click", function () {
         $(this).toggleClass("fa-close");
         viral_search_form.toggleClass("active");
     });
-    navbar_toggler.on("click", function() {
+    navbar_toggler.on("click", function () {
         viral_search_form.removeClass("active");
     });
-    navbar_toggler.on("click", function() {
+    navbar_toggler.on("click", function () {
         searchbtn.removeClass("fa-close");
     });
 
@@ -182,13 +182,13 @@
     $.ajax({
         url: url,
         dataType: "json",
-        success: function(getdata) {
-            $.each(getdata.data.menu, function(key, value) {
+        success: function (getdata) {
+            $.each(getdata.data.menu, function (key, value) {
                 if (key === 0) {
                     $(".up-menu").append(
                         `
                         <li class="active"><a href="${value.slug}">${
-                            value.title
+                        value.title
                         }</a></li>
                         `
                     );
@@ -203,32 +203,31 @@
     });
 
     // Get List Article
-
     $.ajax({
         url: url,
         dataType: "json",
-        success: function(getdata) {
-            $.each(getdata.data.article.data, function(key, value) {
+        success: function (getdata) {
+            $.each(getdata.data.article, function (key, value) {
                 $(".article-post").append(
                     `
                     <div class="col-12 col-lg-6">
                             <div class="single-blog-post style-3">
                                 <div class="post-thumb">
                                     <a href="#"><img src="${
-                                        value.image
-                                    }" alt=""></a>
+                    value.image
+                    }" alt=""></a>
                                 </div>
                                 <div class="post-data">
                                     <a href="#" class="post-catagory">${
-                                        value.categories
-                                    }</a>
+                    value.categories
+                    }</a>
                                     <a href="#" class="post-title">
                                         <h6>${value.title}</h6>
                                     </a>
                                     <div class="post-meta">
                                         <p class="post-author">By <a href="#">${
-                                            value.author
-                                        }</a></p>
+                    value.author
+                    }</a></p>
                                         <p class="post-date">5 Hours Ago</p>
                                     </div>
                                 </div>
@@ -244,16 +243,16 @@
     $.ajax({
         url: url,
         dataType: "json",
-        success: function(getdata) {
+        success: function (getdata) {
             var no = 1;
-            $.each(getdata.data.trending, function(key, value) {
+            $.each(getdata.data.trending, function (key, value) {
                 $(".trending").append(
                     `
                     <div class="single-blog-post style-4">
                         <!-- Post Thumb -->
                         <div class="post-thumb">
                             <a href="${value.slug}"><img src="${
-                        value.image
+                    value.image
                     }" alt=""></a>
                             <span class="serial-number">0${no++}.</span>
                         </div>
@@ -264,8 +263,8 @@
                             </a>
                             <div class="post-meta">
                                 <p class="post-author">By <a href="#">${
-                                    value.author
-                                }</a></p>
+                    value.author
+                    }</a></p>
                             </div>
                         </div>
                     </div>
@@ -279,15 +278,15 @@
     $.ajax({
         url: url,
         dataType: "json",
-        success: function(getdata) {
+        success: function (getdata) {
             var no = 1;
-            $.each(getdata.data.latest, function(key, value) {
+            $.each(getdata.data.latest, function (key, value) {
                 $(".latest").append(
                     `
                     <div class="single-blog-post style-2 d-flex align-items-center">
                         <div class="post-thumb">
                             <a href="${value.slug}"><img src="${
-                        value.image
+                    value.image
                     }" alt=""></a>
                         </div>
                         <div class="post-data">

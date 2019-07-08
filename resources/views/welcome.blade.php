@@ -396,6 +396,7 @@
     <!-- Active js -->
     <script src="{{ asset('js/jquery-ias.min.js') }}"></script>
     <script src="{{ asset('js/active.js') }}"></script>
+    <script src="{{ asset('js/json.js') }}"></script>
 
     <script type="text/javascript">
         var ias = jQuery.ias({

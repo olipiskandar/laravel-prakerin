@@ -22,13 +22,20 @@ class FrontendAPIController extends Controller
         $article = Article::select('articles.title', 'articles.slug', 'headline', 'image', 'categories.title as categories', 'users.name as author')
             ->join('users', 'users.id', '=', 'articles.user_id')
             ->join('categories', 'categories.id', '=', 'articles.category_id')
-            ->paginate(2);
+            ->get();
         $trending = Article::inRandomOrder()->take(3)->get();
         $latest = Article::orderBy('created_at', 'desc')->take(4)->get();
 
         $response = [
             'success' => true,
-            'data' => ['menu' => $menu, 'top' => $top, 'headline' => $headline, 'article' => $article, 'trending' => $trending, 'latest' => $latest],
+            'data' => [
+                'menu' => $menu,
+                'top' => $top,
+                'headline' => $headline,
+                'article' => $article,
+                'trending' => $trending,
+                'latest' => $latest
+            ],
             'message' => 'Berhasil.'
         ];
 

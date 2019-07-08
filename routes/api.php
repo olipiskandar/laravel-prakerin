@@ -38,3 +38,10 @@ Route::resource('users', 'UserAPIController', [
 
 // Frontend
 Route::resource('front', 'FrontendAPIController');
+
+
+Route::get('contoh', 'ContohController@index');
+Route::get('contoh2', 'ContohController@index2');
+
+
+Route::resource('siswa', 'SiswaController');
