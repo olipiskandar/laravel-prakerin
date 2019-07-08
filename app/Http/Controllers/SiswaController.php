@@ -95,6 +95,13 @@ class SiswaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $siswa = Siswa::find($id)->delete($id);
+
+        $response = [
+            'success' => true,
+            'data' =>  $siswa,
+            'message' => 'Berhasil dihapus.'
+        ];
+        return response()->json($response, 200);
     }
 }

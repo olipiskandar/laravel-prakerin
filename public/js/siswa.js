@@ -12,11 +12,11 @@ $(function () {
         method: "GET",
         dataType: "json",
         success: function (berhasil) {
-            console.log(berhasil)
+            // console.log(berhasil)
             $.each(berhasil.data, function (key, value) {
                 $(".data-siswa").append(
                     `
-                    <li>${value.nama}</li>
+                    <li>${value.nama} <button class="btn btn-danger btn-sm hapus-data" data-id="${value.id}">Hapus</button></li>
                     `
                 )
             })
@@ -34,6 +34,27 @@ $(function () {
             dataType: "json",
             data: {
                 namasiswa: variable_isian_nama
+            },
+            success: function (berhasil) {
+                alert(berhasil.message)
+                location.reload();
+            },
+            error: function (gagal) {
+                console.log(gagal)
+            }
+        })
+    })
+
+    // Hapus Data
+    $(".data-siswa").on('click', '.hapus-data', function () {
+        var id = $(this).data("id");
+        // alert(id)
+        $.ajax({
+            url: alamat + "/" + id,
+            method: "DELETE",
+            dataType: "json",
+            data: {
+                id: id
             },
             success: function (berhasil) {
                 alert(berhasil.message)

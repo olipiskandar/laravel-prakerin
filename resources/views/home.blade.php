@@ -19,7 +19,8 @@
                         <button class="btn btn-success tombol-simpan">Simpan</button>
                     </div>
                     <div>
-                        <ul class="data-siswa"></ul>
+                        <ul class="data-siswa">
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -28,21 +29,3 @@
 </div>
 
 @endsection
-@push('script')
-{{-- <script>
-    $(".tombol-simpan").click(function (e) {
-        e.preventDefault();
-        var nama = $("input[name=nama]").val()
-        $.ajax({
-            type: "POST",
-            url: url,
-            data: {
-                nama: nama
-            },
-            success: function (data) {
-                alert(data.success)
-            }
-        })
-    })
-</script> --}}
-@endpush
